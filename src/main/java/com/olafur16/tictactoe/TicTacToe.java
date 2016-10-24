@@ -6,6 +6,10 @@ public class TicTacToe
 	{
 		return "Test";
 	}
+	public static String test2()
+	{
+		return "Test2";
+	}
 	public static void main(String[] args)
 	{
 		

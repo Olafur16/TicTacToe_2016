@@ -9,4 +9,8 @@ public class TicTacToeTest{
 	public void testString() throws Exception{
 		assertEquals("Test", TicTacToe.test());
 	}
+	@Test
+	public void testString2() throws Exception{
+		assertEquals("Test2", TicTacToe.test2());
+	}
 }
