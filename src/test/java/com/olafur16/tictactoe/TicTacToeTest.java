@@ -25,4 +25,37 @@ public class TicTacToeTest{
 		assertEquals('O', game.switchPlayer('X'));
 
 	}
+
+	@Test
+	public void testMakeMove() throws Exception {
+		TicTacToe game = new TicTacToe();
+
+		game.makeMoveTest('1');
+		game.makeMoveTest('5');
+		game.makeMoveTest('9');
+
+		assertEquals('X', game.charAt(0,0));
+		assertEquals('O', game.charAt(1,1));
+		assertEquals('X', game.charAt(2,2));
+
+	}
+
+	@Test
+	public void testcheckWinner() throws Exception{
+		TicTacToe game = new TicTacToe();
+
+		game.makeMoveTest('1'); //X
+		game.makeMoveTest('5'); //O
+		game.makeMoveTest('9'); //X
+
+		assertEquals('N', game.checkWinner());
+
+		game.makeMoveTest('3'); //O
+		game.makeMoveTest('8'); //X
+		game.makeMoveTest('4'); //O
+		game.makeMoveTest('7'); //X
+
+		assertEquals('X', game.checkWinner());
+
+	}
 }
