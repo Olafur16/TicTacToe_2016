@@ -27,6 +27,17 @@ public class TicTacToe
 	{
 		return board[posX][posY];
 	}
+
+	public char switchPlayer(char player)
+	{
+    	if(player == 'X')
+        	player = 'O';
+    	else
+        	player = 'X';
+
+    	return player;
+	}
+
 	public static void main(String[] args)
 	{
 

@@ -17,4 +17,12 @@ public class TicTacToeTest{
 		assertEquals('4', game.charAt(1, 0));
 		assertEquals('9', game.charAt(2, 2));
 	}
+
+	@Test
+	public void testSwitchPlayer() throws Exception {
+		TicTacToe game = new TicTacToe();
+		assertEquals('X', game.switchPlayer('O'));
+		assertEquals('O', game.switchPlayer('X'));
+
+	}
 }
