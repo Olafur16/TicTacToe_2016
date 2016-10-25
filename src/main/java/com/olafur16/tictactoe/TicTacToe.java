@@ -129,6 +129,48 @@ public class TicTacToe
     	}
 	}
 
+	private char checkWinner(char player)
+	{
+		if (board[0][0] == player && board[0][1] == player && board[0][2] == player)
+			return player;
+		if (board[1][0] == player && board[1][1] == player && board[1][2] == player)
+			return player;
+		if (board[2][0] == player && board[2][1] == player && board[2][2] == player)
+			return player;
+
+		if (board[0][0] == player && board[1][0] == player && board[2][0] == player)
+			return player;
+		if (board[0][1] == player && board[1][1] == player && board[2][1] == player)
+			return player;
+		if (board[0][2] == player && board[1][2] == player&& board[2][2] == player)
+			return player;
+
+		if (board[0][0] == player && board[1][1] == player && board[2][2] == player)
+			return player;
+		if (board[2][0] == player && board[1][1] == player && board[0][2] == player)
+			return player;
+
+		else
+		{
+			return 'n';
+		}
+
+	}
+
+	public char checkWinner()
+	{
+		if(checkWinner('X') == 'X')
+		{
+			return 'X';
+		}
+		
+		if (checkWinner('O') == 'O') {
+			return 'O';
+		}
+
+		return 'N';
+	}
+
 
 	//Test function to make it easier to test the makeMove function
 	public void makeMoveTest(char choice) 
