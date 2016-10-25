@@ -25,4 +25,20 @@ public class TicTacToeTest{
 		assertEquals('O', game.switchPlayer('X'));
 
 	}
+
+	@Test
+	public void testMakeMove() throws Exception {
+		TicTacToe game = new TicTacToe();
+
+		game.makeMoveTest('1');
+		game.makeMoveTest('5');
+		game.makeMoveTest('9');
+
+		assertEquals('X', game.charAt(0,0));
+		assertEquals('O', game.charAt(1,1));
+		assertEquals('X', game.charAt(2,2));
+
+	}
+
+
 }
