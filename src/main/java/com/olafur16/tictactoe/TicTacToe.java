@@ -81,15 +81,8 @@ public class TicTacToe
 
         	ui.displayMessage(" position: ");
         	char choice;
-        	try
-        	{
-        		choice = ui.readInput();
-        	}
-        	catch(IOException e) 
-        	{
-        		ui.displayMessage("IOException in makeMove");
-        		return;
-        	}
+
+        	choice = ui.readInput();
         	
 
             switch(choice)

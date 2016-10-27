@@ -1,21 +1,19 @@
 package com.olafur16.tictactoe;
 
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class UI
 {
-	private BufferedReader reader;
+
 
 	public UI()
 	{
-		reader = new BufferedReader(new InputStreamReader(System.in));
+
 	}
-	public char readInput() throws IOException
+	public char readInput()
 	{
-		String input = reader.readLine();
+		String input = StdIn.readLine();
 		return input.charAt(0);
 	}
 
