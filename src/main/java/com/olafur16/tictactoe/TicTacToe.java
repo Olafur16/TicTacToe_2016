@@ -21,6 +21,12 @@ public class TicTacToe
 		fillBoard();
 	}
 
+	public void displayBoard()
+	{
+		ui.displayBoard(board, 3);
+	}
+	
+	
 	public char[][] getBoard()
 	{
 		return board;
@@ -213,6 +219,12 @@ public class TicTacToe
 
 	public static void main(String[] args)
 	{
-
+		TicTacToe ttt = new TicTacToe();
+		
+		ttt.displayBoard();
+		StdIn.readLine();
+		
+		
+		
 	}
 }
