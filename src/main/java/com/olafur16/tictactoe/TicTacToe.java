@@ -12,6 +12,11 @@ public class TicTacToe
 	public char currentPlayer;
 	private int turnCounter = 0;
 	public UI ui;
+	
+	public int getTurnCounter()
+	{
+		return turnCounter;
+	}
 
 	public TicTacToe()
 	{
@@ -73,7 +78,7 @@ public class TicTacToe
 
       	else
       	{
-           	ui.displayMessage("Invalid move");
+           	ui.displayMessageWithNewLine("Invalid move");
            	return true;
         }
 
@@ -86,7 +91,7 @@ public class TicTacToe
     	while(illegalMove)
     	{
 
-        	ui.displayMessage(" position: ");
+        	ui.displayMessage("Player " + currentPlayer + " make a move: ");
         	char choice;
 
         	choice = ui.readInput();
@@ -121,7 +126,7 @@ public class TicTacToe
                  case '9':
                  	illegalMove = makeMove(2,2,'9');
                   break;
-                default:  ui.displayMessage("Invalid move");
+                default:  ui.displayMessageWithNewLine("Invalid move");
                 	illegalMove = true;
                 break;
             }
@@ -208,7 +213,7 @@ public class TicTacToe
                  case '9':
                  	illegalMove = makeMove(2,2,'9');
                   break;
-                default:  ui.displayMessage("Invalid move");
+                default:  ui.displayMessageWithNewLine("Invalid move ");
                 	illegalMove = true;
                 break;
             }
@@ -219,12 +224,32 @@ public class TicTacToe
 
 	public static void main(String[] args)
 	{
+		UI ui = new UI();
 		TicTacToe ttt = new TicTacToe();
 		
 		ttt.displayBoard();
+		while(ttt.getTurnCounter()<9)
+		{
+		ttt.makeMove();
+		ttt.displayBoard();
+			if(ttt.checkWinner() =='X')
+			{
+				ui.displayMessageWithNewLine("Winner is X");
+				break;
+			}
+			else if(ttt.checkWinner() =='O')
+			{
+				ui.displayMessageWithNewLine("Winner is O");
+				break;
+			}
+			else if(ttt.checkWinner() =='N' && ttt.getTurnCounter()==9)
+			{
+				ui.displayMessageWithNewLine("Draw!");
+				break;
+			}	
+			
+		}
 		StdIn.readLine();
-		
-		
 		
 	}
 }
