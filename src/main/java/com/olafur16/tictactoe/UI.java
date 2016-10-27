@@ -10,6 +10,7 @@ public class UI
 	public UI()
 	{
 
+	
 	}
 	public char readInput()
 	{
