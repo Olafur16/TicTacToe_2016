@@ -1,9 +1,8 @@
 package com.olafur16.tictactoe;
 
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class TicTacToe
 {
