@@ -246,6 +246,7 @@ public class TicTacToe
 			{
 				ui.displayMessageWithNewLine("Draw!");
 				break;
+				
 			}	
 			
 		}
