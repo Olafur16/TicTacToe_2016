@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+./gradlew clean
+./gradlew build
+./gradlew installDist
+./gradlew javadoc
+
+rm -r ../TicTacToe-installed
+
+cp -R build/install/ ../TicTacToe-installed/
+cp -R docs ../TicTacToe-installed/docs
+cp -R build/reports/ ../TicTacToe-installed/docs
+cp -R build/docs/javadoc ../TicTacToe-installed/docs
