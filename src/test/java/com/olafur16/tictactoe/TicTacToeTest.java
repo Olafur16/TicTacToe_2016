@@ -41,6 +41,19 @@ public class TicTacToeTest{
 	}
 
 	@Test
+	public void testCharAt() throws Exception {
+		TicTacToe game = new TicTacToe();
+
+		game.makeMoveTest('1');
+		game.makeMoveTest('3');
+		game.makeMoveTest('6');
+
+	    assertEquals('X', game.charAt(0,0));
+		assertEquals('O', game.charAt(0,2));
+		assertEquals('X', game.charAt(1,2));
+	}
+
+	@Test
 	public void testcheckWinner() throws Exception{
 		TicTacToe game = new TicTacToe();
 
