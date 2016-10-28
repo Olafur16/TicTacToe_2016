@@ -8,10 +8,10 @@ public class UI
 	public void displayBoard(char board[][], int size)
 	{
 		
-		for (int x = 0;x<size; x++)
+		for (int x = 0; x < size; x++)
 		{
 			
-			for (int y = 0; y<size;y++)
+			for (int y = 0; y < size; y++)
 			{
 				StdOut.print(board[x][y] + " ");
 			}
@@ -26,6 +26,7 @@ public class UI
 	
 	
 	}
+	
 	public char readInput()
 	{
 		String input = StdIn.readLine();
