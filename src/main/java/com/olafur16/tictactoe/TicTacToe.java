@@ -7,16 +7,13 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class TicTacToe
 {
+
 	public static final int boardSize = 3;
 	private char[][] board;
 	public char currentPlayer;
 	private int turnCounter = 0;
 	public UI ui;
 	
-	public int getTurnCounter()
-	{
-		return turnCounter;
-	}
 
 	public TicTacToe()
 	{
@@ -25,6 +22,32 @@ public class TicTacToe
 		currentPlayer = 'X';
 		fillBoard();
 	}
+
+  public int getTurnCounter()
+  {
+    return turnCounter;
+  }
+
+
+  public void welcome()
+  {
+    ui.displayMessageWithNewLine("Welcome to TicTacToe");
+    ui.displayMessage("Choose your Player X or O: ");
+    char choice = ui.readInput();
+
+      while(choice != 'X' && choice != 'O')
+      {
+           
+            ui.displayMessageWithNewLine(" ");
+            ui.displayMessage("Choose X or O: ");
+            choice = ui.readInput();  
+      
+      } 
+
+
+    currentPlayer = choice;
+  }
+
 
 	public void displayBoard()
 	{
@@ -147,7 +170,7 @@ public class TicTacToe
 			return player;
 		if (board[0][1] == player && board[1][1] == player && board[2][1] == player)
 			return player;
-		if (board[0][2] == player && board[1][2] == player&& board[2][2] == player)
+		if (board[0][2] == player && board[1][2] == player && board[2][2] == player)
 			return player;
 
 		if (board[0][0] == player && board[1][1] == player && board[2][2] == player)
@@ -226,9 +249,9 @@ public class TicTacToe
 	{
 		UI ui = new UI();
 		TicTacToe ttt = new TicTacToe();
-		
+		ttt.welcome();
 		ttt.displayBoard();
-		while(ttt.getTurnCounter()<9)
+		while(ttt.getTurnCounter() < 9)
 		{
 		ttt.makeMove();
 		ttt.displayBoard();
