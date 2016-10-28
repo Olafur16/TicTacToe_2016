@@ -38,7 +38,7 @@ public class TicTacToe
       while(choice != 'X' && choice != 'O')
       {
            
-            ui.displayMessageWithNewLine(" ");
+            ui.displayMessageWithNewLine("Invalid choice! ");
             ui.displayMessage("Choose X or O: ");
             choice = ui.readInput();  
       
