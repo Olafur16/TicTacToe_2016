@@ -30,6 +30,11 @@ public class UI
 	public char readInput()
 	{
 		String input = StdIn.readLine();
+
+		while(input.length() == 0)
+		{
+			input = StdIn.readLine();
+		}
 		return input.charAt(0);
 	}
 
