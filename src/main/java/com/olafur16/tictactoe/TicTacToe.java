@@ -6,7 +6,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 
 /**
- * <h1>TicTacToe functions<h1>
+ * TicTacToe functions
  * This class has the main functions and functionality for the game TicTacToe
  * 
  * boardSize is a fixed size of integer 3. The board is 3x3.
@@ -45,7 +45,7 @@ public class TicTacToe
 	}
 
 	/**
-	 * Returns the number of turns done. 
+	 *@return the number of turns done. 
 	 */
   public int getTurnCounter()
   {
