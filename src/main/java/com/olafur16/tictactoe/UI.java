@@ -40,7 +40,6 @@ public class UI
 		/**
 		 * readInput reads the user input as he makes a move. 
 		 *  
-		 *  
 		 */
 		String input = StdIn.readLine();
 
