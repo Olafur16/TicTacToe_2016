@@ -9,11 +9,11 @@ import edu.princeton.cs.algs4.StdOut;
  * <h1>TicTacToe functions<h1>
  * This class has the main functions and functionality for the game TicTacToe
  * 
- * @param boardSize is a fixed size of integer 3. The board is 3x3.
- * @param board is a char array which will be 3x3 in size.
- * @param currentPlayer is the player who is to make a move. Either char X or O. 
- * @param turnCounter is set in the beginning to 0 and counts the number of moves that are made. If move
- * @param ui is a reference to the class UI which is the UserInterface class. 
+ * boardSize is a fixed size of integer 3. The board is 3x3.
+ * board is a char array which will be 3x3 in size.
+ * currentPlayer is the player who is to make a move. Either char X or O. 
+ * turnCounter is set in the beginning to 0 and counts the number of moves that are made. If move
+ * ui is a reference to the class UI which is the UserInterface class. 
  * 
  * 
  */
@@ -56,7 +56,7 @@ public class TicTacToe
 
   /**
    * Displays a Greeting message to the players and offers the player to pick a char token X or O. 
-   * @param choice receives players choice of char token X or O
+   * the char choice receives players choice of char token X or O
    * Checks if token is either X or O. If other then prints Invalid choice. 
    * Sets the token for the player who makes the first move. 
    */
@@ -104,7 +104,7 @@ public class TicTacToe
 	/**
 	 * Method is called in the beginning of the game to fill the gameboard with numbers. 
 	 * Fills the board array 3x3 with numbers from 1 to 9. 
-	 * @param nextNumberToFill is set to 1 and climbs to 9. 
+	 * char nextNumberToFill is set to 1 and climbs to 9. 
 	 * 
 	 */
 	public void fillBoard()
@@ -125,7 +125,9 @@ public class TicTacToe
 	
 	
 	/**
-	 * Returns a certain char in the board. Method mainly used for testing the board.  
+	 * Returns a certain char in the board. Method mainly used for testing the board. 
+	 * @param posX indicates the X position.
+	 * @param posY indicates the Y position. 
 	 */
 	public char charAt(int posX, int posY)
 	{	
@@ -135,7 +137,7 @@ public class TicTacToe
 	
 	/**
 	 * Switches players from the player who just made a move to the player who makes the next move. 
-	 * 
+	 * @param player indicates the player who just made a move. 
 	 */
 	
 	public char switchPlayer(char player)
@@ -155,6 +157,9 @@ public class TicTacToe
 	 * The method receives a x position and a y position of the board and the corresponding number.
 	 * If corresponding number is still in array. Move is made. 
 	 * 
+	 * @param posX indicates the X position on the board. 
+	 * @param posY indicates the Y position on the board. 
+	 * @param number is the number chosen by the player in the game. 
 	 * 
 	 */
 	private boolean makeMove(int posX,int posY,char number)
@@ -197,6 +202,7 @@ public class TicTacToe
 	 * The number is run through validation with the makeMove(int posX, int posY,char number)
 	 * if Illegal move, the readMove method is run again.
 	 * 
+	 * @param choice is the number a player chose to play. 
 	 */
 	public void makeMove(char choice)
 	{
@@ -245,6 +251,7 @@ public class TicTacToe
 	/**
 	 * This method checks if there is a winner (3 icons in a row or across)on the board. 
 	 * Returns the winner as the players char X or O or the char n if there is no player. 
+	 * @param player is the player who last played and is beeing checked if he won the game. 
 	 */
 	private char checkWinner(char player)
 	{
@@ -302,8 +309,7 @@ public class TicTacToe
 	 * Game ends when there is a winner or total number of moves are equal to 9 moves. 
 	 * 
 	 * 
-	 * @param ui is a new instance of the Ui class. 
-	 * @param tt is a new instance of the TicTacToe class
+	 * @param args are for command-line arguments in Java.
 	 * 
 	 */
 	public static void main(String[] args)
