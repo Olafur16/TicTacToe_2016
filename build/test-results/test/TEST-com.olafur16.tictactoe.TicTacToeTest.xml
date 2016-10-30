@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.olafur16.tictactoe.TicTacToeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-10-24T01:43:12" hostname="DESKTOP-K6MP23T" time="0.003">
+<testsuite name="com.olafur16.tictactoe.TicTacToeTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-10-30T09:42:40" hostname="Lenovo-PC" time="0.006">
   <properties/>
-  <testcase name="testString" classname="com.olafur16.tictactoe.TicTacToeTest" time="0.003"/>
+  <testcase name="testSwitchPlayer" classname="com.olafur16.tictactoe.TicTacToeTest" time="0.003"/>
+  <testcase name="testMakeMove" classname="com.olafur16.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="checkWinner" classname="com.olafur16.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testCharAt" classname="com.olafur16.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testfillBoard" classname="com.olafur16.tictactoe.TicTacToeTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
