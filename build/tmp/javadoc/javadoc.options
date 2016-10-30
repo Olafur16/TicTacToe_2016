@@ -1,0 +1,7 @@
+-classpath 'C:\\TicTacToe_2016\\build\\classes\\main;C:\\TicTacToe_2016\\build\\resources\\main;C:\\TicTacToe_2016\\libs\\algs4.jar;C:\\TicTacToe_2016\\libs\\sqlserverjdbc.jar;C:\\TicTacToe_2016\\libs\\commons-io-2.5.jar;C:\\Users\\Albert\\.gradle\\caches\\modules-2\\files-2.1\\org.slf4j\\slf4j-api\\1.7.21\\139535a69a4239db087de9bab0bee568bf8e0b70\\slf4j-api-1.7.21.jar'
+-d 'C:\\TicTacToe_2016\\build\\docs\\javadoc'
+-doctitle 'TicTacToe_2016 API'
+-quiet 
+-windowtitle 'TicTacToe_2016 API'
+'C:\\TicTacToe_2016\\src\\main\\java\\com\\olafur16\\tictactoe\\TicTacToe.java'
+'C:\\TicTacToe_2016\\src\\main\\java\\com\\olafur16\\tictactoe\\UI.java'
