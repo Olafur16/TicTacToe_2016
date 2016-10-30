@@ -5,10 +5,6 @@ import org.junit.Test;
 
 public class TicTacToeTest{
 
-	/*@Test
-	public void testString() throws Exception{
-		assertEquals("Test", TicTacToe.test());
-	}*/
 
 	@Test
 	public void testfillBoard() throws Exception{
@@ -30,9 +26,9 @@ public class TicTacToeTest{
 	public void testMakeMove() throws Exception {
 		TicTacToe game = new TicTacToe();
 
-		game.makeMoveTest('1');
-		game.makeMoveTest('5');
-		game.makeMoveTest('9');
+		game.makeMove('1');
+		game.makeMove('5');
+		game.makeMove('9');
 
 		assertEquals('X', game.charAt(0,0));
 		assertEquals('O', game.charAt(1,1));
@@ -44,9 +40,9 @@ public class TicTacToeTest{
 	public void testCharAt() throws Exception {
 		TicTacToe game = new TicTacToe();
 
-		game.makeMoveTest('1');
-		game.makeMoveTest('3');
-		game.makeMoveTest('6');
+		game.makeMove('1');
+		game.makeMove('3');
+		game.makeMove('6');
 
 	    assertEquals('X', game.charAt(0,0));
 		assertEquals('O', game.charAt(0,2));
@@ -54,19 +50,19 @@ public class TicTacToeTest{
 	}
 
 	@Test
-	public void testcheckWinner() throws Exception{
+	public void checkWinner() throws Exception{
 		TicTacToe game = new TicTacToe();
 
-		game.makeMoveTest('1'); //X
-		game.makeMoveTest('5'); //O
-		game.makeMoveTest('9'); //X
+		game.makeMove('1'); //X
+		game.makeMove('5'); //O
+		game.makeMove('9'); //X
 
 		assertEquals('N', game.checkWinner());
 
-		game.makeMoveTest('3'); //O
-		game.makeMoveTest('8'); //X
-		game.makeMoveTest('4'); //O
-		game.makeMoveTest('7'); //X
+		game.makeMove('3'); //O
+		game.makeMove('8'); //X
+		game.makeMove('4'); //O
+		game.makeMove('7'); //X
 
 		assertEquals('X', game.checkWinner());
 

@@ -35,14 +35,14 @@ public class TicTacToe
     ui.displayMessage("Choose your Player X or O: ");
     char choice = ui.readInput();
 
-      while(choice != 'X' && choice != 'O')
-      {
+    while(choice != 'X' && choice != 'O')
+    {
            
-            ui.displayMessageWithNewLine("Invalid choice! ");
-            ui.displayMessage("Choose X or O: ");
-            choice = ui.readInput();  
+        ui.displayMessageWithNewLine("Invalid choice! ");
+        ui.displayMessage("Choose X or O: ");
+        choice = ui.readInput();  
       
-      } 
+    } 
 
 
     currentPlayer = choice;
@@ -108,54 +108,59 @@ public class TicTacToe
 		
 	}
 
-	public void makeMove() 
+	public void readMove()
 	{
-		boolean illegalMove = true;
-    	while(illegalMove)
-    	{
+		ui.displayMessage("Player " + currentPlayer + " make a move: ");
+        char choice;
 
-        	ui.displayMessage("Player " + currentPlayer + " make a move: ");
-        	char choice;
+        choice = ui.readInput();
+        makeMove(choice);
 
-        	choice = ui.readInput();
-        	
-
-            switch(choice)
-            {
-                 case '1':
-                 	illegalMove = makeMove(0,0,'1');
-                     break;
-                 case '2':
-                 	illegalMove = makeMove(0,1,'2');
-                  break;
-                 case '3':
-                 	illegalMove = makeMove(0,2,'3');
-                  break;
-                 case '4':
-					illegalMove = makeMove(1,0,'4');
-                  break;
-                 case '5':
-                 	illegalMove = makeMove(1,1,'5');
-                  break;
-                 case '6':
-               	  	illegalMove = makeMove(1,2,'6');
-                  break;
-                 case '7':
-                 	illegalMove = makeMove(2,0,'7');
-                  break;
-                 case '8':
-                 	illegalMove = makeMove(2,1,'8');
-                  break;
-                 case '9':
-                 	illegalMove = makeMove(2,2,'9');
-                  break;
-                default:  ui.displayMessageWithNewLine("Invalid move");
-                	illegalMove = true;
-                break;
-            }
-
-    	}
 	}
+
+	public void makeMove(char choice)
+	{
+		boolean illegalMove = false;
+	
+		switch(choice)
+		{
+			case '1':
+			illegalMove = makeMove(0,0,'1');
+				break;
+			case '2':
+			illegalMove = makeMove(0,1,'2');
+				break;
+			case '3':
+			illegalMove = makeMove(0,2,'3');
+				break;
+			case '4':
+			illegalMove = makeMove(1,0,'4');
+				break;
+			case '5':
+			illegalMove = makeMove(1,1,'5');
+				break;
+			case '6':
+			illegalMove = makeMove(1,2,'6');
+				break;
+			case '7':
+			illegalMove = makeMove(2,0,'7');
+				break;
+			case '8':
+			illegalMove = makeMove(2,1,'8');
+				break;
+			case '9':
+			illegalMove = makeMove(2,2,'9');
+				break;
+			default:  ui.displayMessageWithNewLine("Invalid move");
+			illegalMove = true;
+				break;
+		}
+
+		if(illegalMove == true)
+		{
+			readMove();
+		}
+}
 
 	private char checkWinner(char player)
 	{
@@ -199,52 +204,6 @@ public class TicTacToe
 		return 'N';
 	}
 
-
-	//Test function to make it easier to test the makeMove function
-	public void makeMoveTest(char choice) 
-	{
-		boolean illegalMove = true;
-    	while(illegalMove)
-    	{
-
-            switch(choice)
-            {
-                 case '1':
-                 	illegalMove = makeMove(0,0,'1');
-                     break;
-                 case '2':
-                 	illegalMove = makeMove(0,1,'2');
-                  break;
-                 case '3':
-                 	illegalMove = makeMove(0,2,'3');
-                  break;
-                 case '4':
-					illegalMove = makeMove(1,0,'4');
-                  break;
-                 case '5':
-                 	illegalMove = makeMove(1,1,'5');
-                  break;
-                 case '6':
-               	  	illegalMove = makeMove(1,2,'6');
-                  break;
-                 case '7':
-                 	illegalMove = makeMove(2,0,'7');
-                  break;
-                 case '8':
-                 	illegalMove = makeMove(2,1,'8');
-                  break;
-                 case '9':
-                 	illegalMove = makeMove(2,2,'9');
-                  break;
-                default:  ui.displayMessageWithNewLine("Invalid move ");
-                	illegalMove = true;
-                break;
-            }
-
-    	}
-
-    }
-
 	public static void main(String[] args)
 	{
 		UI ui = new UI();
@@ -253,7 +212,7 @@ public class TicTacToe
 		ttt.displayBoard();
 		while(ttt.getTurnCounter() < 9)
 		{
-		ttt.makeMove();
+		ttt.readMove();
 		ttt.displayBoard();
 			if(ttt.checkWinner() =='X')
 			{
