@@ -36,7 +36,8 @@ public class UI
 	
 	/**
 	 * readInput reads the user input as he makes a move. 
-	 *  
+	 * 
+	 * @return the input the player made. 
 	 */
 	public char readInput()
 	{

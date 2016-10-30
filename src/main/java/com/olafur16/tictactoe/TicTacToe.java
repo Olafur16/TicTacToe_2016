@@ -92,7 +92,7 @@ public class TicTacToe
 	
 	/**
 	 * Returns the board array. 
-	 * 
+	 * @return the board as it is. 
 	 */
 	public char[][] getBoard()
 	{
@@ -128,6 +128,8 @@ public class TicTacToe
 	 * Returns a certain char in the board. Method mainly used for testing the board. 
 	 * @param posX indicates the X position.
 	 * @param posY indicates the Y position. 
+	 * 
+	 * @return Char in the board at a certain position. 
 	 */
 	public char charAt(int posX, int posY)
 	{	
@@ -138,6 +140,8 @@ public class TicTacToe
 	/**
 	 * Switches players from the player who just made a move to the player who makes the next move. 
 	 * @param player indicates the player who just made a move. 
+	 * 
+	 * @return the player who makes the next move. 
 	 */
 	
 	public char switchPlayer(char player)
@@ -161,6 +165,7 @@ public class TicTacToe
 	 * @param posY indicates the Y position on the board. 
 	 * @param number is the number chosen by the player in the game. 
 	 * 
+	 * @return false if the move is legal, else true. 
 	 */
 	private boolean makeMove(int posX,int posY,char number)
 	{
@@ -185,7 +190,8 @@ public class TicTacToe
 	/**
 	 * Prints out which player is to make a move. 
 	 * Waits for user input and reads the move. 
-	 * Calls the method makeMove to see if a move is illegal or should be made. 
+	 * Calls the method makeMove to see if a move is illegal or should be made.
+	 * 
 	 */
 	public void readMove()
 	{	
@@ -251,7 +257,9 @@ public class TicTacToe
 	/**
 	 * This method checks if there is a winner (3 icons in a row or across)on the board. 
 	 * Returns the winner as the players char X or O or the char n if there is no player. 
-	 * @param player is the player who last played and is beeing checked if he won the game. 
+	 * @param player is the player who last played and is beeing checked if he won the game.
+	 * 
+	 * @return the Winner token X or O.
 	 */
 	private char checkWinner(char player)
 	{
@@ -285,7 +293,7 @@ public class TicTacToe
 	/**
 	 * 
 	 * This method checks if there is a winner by calling checkwinner(char player) method. 
-	 * Returns the winner. 
+	 * @return returns the winner as a token X or O else N if there was no winner. 
 	 * 
 	 */
 	public char checkWinner()
@@ -310,6 +318,8 @@ public class TicTacToe
 	 * 
 	 * 
 	 * @param args are for command-line arguments in Java.
+	 * 
+	 * 
 	 * 
 	 */
 	public static void main(String[] args)
