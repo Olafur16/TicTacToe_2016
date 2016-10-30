@@ -7,7 +7,7 @@ import edu.princeton.cs.algs4.StdOut;
  * <h1>User Interface - Console</h1>
  * This class is the User interface for the game TicTacToe. 
  * Functions for the game is written in the class TicTacToe.
- * @author Benedikt
+ * 
  *
  */
 

@@ -14,7 +14,7 @@ import edu.princeton.cs.algs4.StdOut;
  * @param currentPlayer is the player who is to make a move. Either char X or O. 
  * @param turnCounter is set in the beginning to 0 and counts the number of moves that are made. If move
  * @param ui is a reference to the class UI which is the UserInterface class. 
- * @author Olafur
+ * 
  * 
  */
 
