@@ -62,7 +62,7 @@ public class TicTacToe
    */
   public void welcome()
   {
-    ui.displayMessageWithNewLine("Welcome to TicTacToe");
+    ui.displayMessageWithNewLine("Welcome to TicTacToe Test Test");
     ui.displayMessage("Choose your Player X or O: ");
     char choice = ui.readInput();
 
